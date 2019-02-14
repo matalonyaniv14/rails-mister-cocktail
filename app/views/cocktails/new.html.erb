@@ -1,11 +1,15 @@
 <h1>Cocktails#new</h1>
 <p>Find me in app/views/cocktails/new.html.erb</p>
+ <div class="form-group">
 
 <%= form_for @cocktail do |f|%>
 <%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
+ <%= f.text_field :name %>
+<%= f.submit :class=>" btn btn-primary" %>
 
 <% end %>
+<h3><%= link_to "Home", cocktails_path, :class =>"btn btn-warning home" %></h3>
+</div>
 
-<%= link_to "Home", cocktails_path %>
+
+

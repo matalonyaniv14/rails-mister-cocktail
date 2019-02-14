@@ -1,3 +1,3 @@
-const test1 = console.log("hello i wrote this line in test.js")
+const test1 = ('[data-toggle="tooltip"]').tooltip()
 
 export {test1};

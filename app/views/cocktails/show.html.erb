@@ -14,7 +14,7 @@
 <tr>
 <td class="success"><%=  dose.amount%></td>
 
-<td class="info"><%=  link_to dose.ingredient.name, cocktail_dose_path(dose.ingredient.id), method: :delete%></td>
+<td class="info" data-toggle="tooltip" data-placement="top" title="Delete"><%=  link_to dose.ingredient.name, cocktail_dose_path(dose.ingredient.id), method: :delete%></td>
 
 <td class="danger"><%=  dose.description%></td>
 </tr>
@@ -25,5 +25,5 @@
 
 </div>
 
-<%= link_to "Add ingredient", new_cocktail_dose_path(params[:id]) %>
-<%= link_to "Home", cocktails_path %>
+<%= link_to "Add ingredient", new_cocktail_dose_path(params[:id]), :class=>"btn btn-warning home" %>
+<%= link_to "Home", cocktails_path, :class=>"btn btn-primary home" %>

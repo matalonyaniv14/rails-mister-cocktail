@@ -4,13 +4,13 @@
 
 <%= form_for [@cocktail,@dose] do |f|%>
 <%= f.label :amount %>
-<%= f.text_field :amount %>
+<div class="form-group"><%= f.text_field :amount %></div>
 <%= f.label :ingredient %>
-<%= f.text_field :ingredient %>
+<div class="form-group"><%= f.text_field :ingredient %></div>
 <%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.submit %>
+<div class="form-group"><%= f.text_field :description %></div>
+<%= f.submit :class=>"btn btn-warning"%>
 
 <% end %>
 
-<%= link_to "Home", cocktails_path %>
+<%= link_to "Home", cocktails_path, :class=>"btn btn-primary " %>
