@@ -1,0 +1,29 @@
+<h1>Cocktails#show</h1>
+
+<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="container">
+<table class="table">
+<tr>
+    <th>amount</th>
+    <th>ingredient</th>
+    <th>description</th>
+  </tr>
+
+
+<% @doses.each do |dose| %>
+<tr>
+<td class="success"><%=  dose.amount%></td>
+
+<td class="info"><%=  link_to dose.ingredient.name, cocktail_dose_path(dose.ingredient.id), method: :delete%></td>
+
+<td class="danger"><%=  dose.description%></td>
+</tr>
+
+<% end  %>
+
+</table>
+
+</div>
+
+<%= link_to "Add ingredient", new_cocktail_dose_path(params[:id]) %>
+<%= link_to "Home", cocktails_path %>
